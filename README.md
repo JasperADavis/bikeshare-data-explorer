@@ -18,6 +18,9 @@ Data Files (not included in the repo):
 * new_york_city.csv
 * washington.csv
 
+Other Files:
+* .gitignore (used to prevent upload of large data files)
+
 
 
 ### Credits
