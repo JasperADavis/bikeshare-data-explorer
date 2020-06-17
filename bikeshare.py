@@ -116,14 +116,7 @@ def time_stats(df):
     print('-'*40)
 
     # view raw data option
-    counter = 0
-
-    view_data = input('Do you want to view raw data?').lower()
-
-    while view_data == 'yes':
-        print(df[counter:(counter + 5)])
-        counter += 5
-        view_data = input('Do you want to view raw data?')
+    view_raw_data(df)
 
 
 def station_stats(df):
@@ -151,14 +144,7 @@ def station_stats(df):
     print('-'*40)
 
     # view raw data option
-    counter = 0
-
-    view_data = input('Do you want to view raw data?').lower()
-
-    while view_data == 'yes':
-        print(df[counter:(counter + 5)])
-        counter += 5
-        view_data = input('Do you want to view raw data?')
+    view_raw_data(df)
 
 
 def trip_duration_stats(df):
@@ -182,14 +168,7 @@ def trip_duration_stats(df):
     print('-'*40)
 
     # view raw data option
-    counter = 0
-
-    view_data = input('Do you want to view raw data?').lower()
-
-    while view_data == 'yes':
-        print(df[counter:(counter + 5)])
-        counter += 5
-        view_data = input('Do you want to view raw data?')
+    view_raw_data(df)
 
 
 def user_stats(df):
@@ -228,21 +207,15 @@ def user_stats(df):
     print('-'*40)
 
     # view raw data option
-    counter = 0
+    view_raw_data(df)
 
-    view_data = input('Do you want to view raw data?').lower()
 
-    while view_data == 'yes':
-        print(df[counter:(counter + 5)])
-        counter += 5
-        view_data = input('Do you want to view raw data?')
-
-def view_raw_data():
+def view_raw_data(x):
     """Gives user option to view raw data, 5 rows at a time """
     counter = 0
     view_data = input('Do you want to view raw data?').lower()
     while view_data == 'yes':
-        print(df[counter:(counter + 5)])
+        print(x[counter:(counter + 5)])
         counter += 5
         view_data = input('Do you want to view raw data?')
 
