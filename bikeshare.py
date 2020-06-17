@@ -12,7 +12,7 @@ def get_filters():
 
     Returns:
         (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
+        (str) month - name of the month to filter by, or "all" to apply no month filter (only January through June (inclusive) are valid month choices)
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
@@ -46,14 +46,14 @@ def get_filters():
 
 def load_data(city, month, day):
     """
-    Loads data for the specified city and filters by month and day if applicable.
+    Loads data for the specified city and filters by month, day, both, or neither.
 
     Args:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
+        df - Pandas DataFrame containing city data filtered by month and/or day (if selected)
     """
 # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
@@ -193,7 +193,12 @@ def trip_duration_stats(df):
 
 
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """
+    Displays statistics on bikeshare users.
+
+    Note: Gender and Birth Year data doesn't exist for Washington data set.
+    A try/except function pair is used to prevent this from causing issues.
+    """
 
     print('\nCalculating User Stats...\n')
     # Timing the calculation
