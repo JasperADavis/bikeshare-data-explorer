@@ -237,6 +237,16 @@ def user_stats(df):
         counter += 5
         view_data = input('Do you want to view raw data?')
 
+def view_raw_data():
+    """Gives user option to view raw data, 5 rows at a time """
+    counter = 0
+    view_data = input('Do you want to view raw data?').lower()
+    while view_data == 'yes':
+        print(df[counter:(counter + 5)])
+        counter += 5
+        view_data = input('Do you want to view raw data?')
+
+
 
 def main():
     while True:
