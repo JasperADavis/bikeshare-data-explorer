@@ -1,8 +1,8 @@
+# Project Title
+Bikeshare Data Analysis
+
 ### Date created
 This project was initially created on Tuesday, 2020 June 16. This README was created on Wednesday, 2020 June 17.
-
-### Project Title
-Bikeshare Data Analysis
 
 ### Description
 This project leverages python to create an interactive method for exploring the bikeshare usage data from companies operating in three major cities for the first six months of the year 2017.
